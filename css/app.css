@@ -1,0 +1,263 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+/* Resetting default margin, padding, and setting box-sizing to border-box for all elements and their pseudo-elements */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables declaration for colors using HSL values */
+:root {
+    --white: hsl(0, 0%, 100%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+ul,
+ol {
+    margin-left: 1.1em;
+}
+
+li::marker {
+    color: var(--rose-800);
+}
+
+hr {
+    background-color: var(--stone-150);
+    margin-bottom: 32px;
+}
+
+/* commons */
+.ingredients h2,
+.nutrition h2,
+.instructions h2 {
+    margin-bottom: 24px;
+    color: var(--brown-800);
+    font-size: 28px;
+    line-height: 28px;
+    font-family: "Young Serif", sans-serif;
+}
+
+/* Setting default styles for the body */
+body {
+    line-height: 1.2;
+    font-family: "Outfit", "Young Serif", sans-serif;
+    font-optical-sizing: auto;
+}
+
+main {
+    background-color: var(--stone-100);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    max-width: 736px;
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 24px;
+    margin: 128px auto;
+}
+
+header {
+    margin-bottom: 32px;
+}
+
+header .image {
+    margin-bottom: 40px;
+    border-radius: 24px;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: 900;
+    font-family: "Young Serif", sans-serif;
+    line-height: 40px;
+    color: var(--stone-900);
+    margin-bottom: 24px;
+}
+
+header p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--stone-600);
+    font-family: "Outfit", sans-serif;
+}
+
+/* preparation time styling */
+.prep-time {
+    margin-bottom: 32px;
+    background-color: var(--rose-50);
+    padding: 24px;
+    border-radius: 12px;
+}
+
+.prep-time h2 {
+    margin-bottom: 16px;
+    color: var(--rose-800);
+    font-size: 20px;
+    line-height: 20px;
+    font-family: "Outfit", sans-serif;
+}
+
+.prep-time--list li {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--stone-600);
+    padding-left: 1.1em;
+
+}
+
+.prep-time--list li:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+/* ingredient list styling */
+.ingredients {
+    margin-bottom: 32px;
+}
+
+.ingredients-lists li,
+.instructions-lists li {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--stone-600);
+    margin-bottom: 8px;
+    font-family: "Outfit", sans-serif;
+    padding: 0 1rem;
+}
+
+.ingredients-lists li:last-child,
+.instructions-lists li:last-child {
+    margin-bottom: 0;
+}
+
+/* instructions styling */
+.instructions {
+    margin-bottom: 32px;
+}
+
+/* nutrition styling  */
+
+/* Styling for the nutrition section paragraphs */
+.nutrition p {
+    font-size: 16px;
+    margin-bottom: 24px;
+    color: var(--stone-600);
+    line-height: 24px;
+    font-family: "Outfit", sans-serif;
+}
+
+/* Styling for the nutrition table */
+.nutrition-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+/* Styling for table headers and cells */
+.nutrition-table th,
+.nutrition-table td {
+    padding: 12px;
+    text-align: left;
+    font-family: "Outfit", sans-serif;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+/* Additional styling for table headers */
+.nutrition-table th {
+    width: 50%;
+    vertical-align: top;
+    font-weight: 400;
+    color: var(--stone-600);
+    padding-left: 32px;
+}
+
+/* Additional styling for table cells */
+.nutrition-table td {
+    width: 50%;
+    text-align: left;
+    color: var(--brown-800);
+    font-weight: 600;
+}
+
+/* Adding a border to separate table rows except the last one */
+.nutrition-table tr:not(:last-child) {
+    border-bottom: 1px solid var(--stone-150);
+}
+
+@media screen and (width < 900px) {
+
+    /* reset the container width to 80.21% to match the design exactly */
+    .container {
+        width: 80.21%;
+    }
+}
+
+@media screen and (width < 514px) {
+
+    /* reset border around the image  */
+    img {
+        border-radius: 0%;
+    }
+
+    /* reset the container padding, margin and border-radius */
+    .container {
+        width: 100%;
+        margin: 0;
+        padding: 0 32px;
+        border-radius: 0;
+    }
+
+    /* position the div out of frame to take full width and not be constained by the container padding of 32px */
+    header .image {
+        height: 100%;
+        max-height: 218px;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin: 0 -50vw 40px;
+    }
+
+    /* reset header font size: ; */
+    header h1 {
+        font-size: 36px;
+    }
+
+    /* reduce the padding so as to match the design exactly not of any importance */
+    .ingredients-lists li,
+    .instructions-lists li {
+        padding-right: .5rem;
+    }
+}
+
+@media screen and (width < 363px) {
+    .container {
+        padding: 0 24px;
+
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+}
