@@ -12,11 +12,11 @@
 
 ### Screenshot
 
-- [!NOTE] desktop view
-![Simple Omelette meal](./design/Recipe-page-desktop-view.jpg)
+> [!NOTE] desktop view
+- ![Simple Omelette meal](./design/Recipe-page-desktop-view.jpg)
 
-- [!NOTE] Mobile view
-![Simple Omelette meal](./design/Recipe-page-mobile-view.jpg)
+> [!NOTE] Mobile view
+- ![Simple Omelette meal](./design/Recipe-page-mobile-view.jpg)
 
 ### Links
 
